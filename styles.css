@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(15, 0, 71);
+  color: #ffffff;
+  margin: 50px;
+}
+
+h2 {
+  text-align: center;
+  font-size: 60px;
+}
+
+p {
+  font-size: 40px;
+}
+
+section {
+  display: grid;
+  place-items: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.hidden {
+  opacity: 0;
+  filter: blur(15px);
+  transform: translateX(-100%);
+  transition: all 2s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0%);
+  transition: all 2s;
+}
+
+.logos {
+  display: flex;
+  gap: 65px;
+}
+
+.contact {
+  height: 125px;
+  background-color: white;
+  padding: 5px;
+  border-radius: 50%;
+  margin: 5px;
+  transition: transform 0.5s ease-out;
+}
+.contact:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.logos :nth-child(2) {
+  transition-delay: 400ms;
+}
+.logos :nth-child(1) {
+  transition-delay: 600ms;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+  height: 50px;
+}
+.carousel {
+  width: 100%;
+  display: flex;
+  gap: 50px;
+  position: relative;
+}
+
+.item {
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  left: 100%;
+  animation: autoRun 10s linear infinite;
+  animation-delay: var(--delay);
+  cursor: pointer;
+}
+
+.item img {
+  width: 20%;
+}
+
+@keyframes autoRun {
+  from {
+    left: 100%;
+  }
+  to {
+    left: -50%;
+  }
+}

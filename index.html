@@ -4,85 +4,72 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
-    <title>Document</title>
+    <title>Gabriel Kenji | Início</title>
   </head>
   <body>
-    <section class="hidden">
-      <h2>Titulo 1</h2>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa aliquam
-        possimus facere eius autem placeat culpa ut? Laborum ipsum eaque dolore,
-        non, dolor dicta quidem eligendi enim consequuntur exercitationem aut?
-      </p>
-    </section>
-    <section class="hidden">
-      <h2>Titulo 2</h2>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa aliquam
-        possimus facere eius autem placeat culpa ut? Laborum ipsum eaque dolore,
-        non, dolor dicta quidem eligendi enim consequuntur exercitationem aut?
-      </p>
-    </section>
-    <section class="main hidden">
-      <h2>Portifolio</h2>
-      <div class="container">
-        <div class="carousel">
-          <div class="item" style="--delay: 2s">
-            <img src="assets/item1-1.png" alt="" />
-          </div>
-          <div class="item" style="--delay: 4s">
-            <img src="assets/item1-2.png" alt="" />
-          </div>
-          <div class="item" style="--delay: 6s">
-            <img src="assets/item1-3.png" alt="" />
-          </div>
-          <div class="item" style="--delay: 8s">
-            <img src="assets/item1-4.png" alt="" />
-          </div>
-          <div class="item" style="--delay: 10s">
-            <img src="assets/item1-5.png" alt="" />
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="hidden">
-      <h2>Contatos</h2>
+    <header class="cabecalho">
+      <div class="cabecalho__logo">Gabriel<span>Kenji</span></div>
+      <nav>
+        <ul class="menu-principal">
+          <li><a class="menu-principal__link" href="index.html">Início</a></li>
+          <li><a class="menu-principal__link" href="projetos.html">Projetos</a></li>
+          <li><a class="menu-principal__link" href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+    </header>
 
-      <div class="logos">
-        <div class="hidden">
-          <a href="https://github.com/GKenji27" target="_blank">
-            <img
-              class="contact"
-              src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
-              alt="GitHub"
-            />
-          </a>
+    <main>
+      <section class="secao">
+        <div class="hero">
+          <img
+            class="hero__foto"
+            src="assets/perfil.jpg"
+            alt="Foto de perfil de Gabriel Kenji Carvalho Nagao"
+          />
+          <div class="hero__texto">
+            <p class="hero__saudacao">Olá, eu sou</p>
+            <h1 class="hero__nome">Gabriel Kenji Carvalho Nagao</h1>
+            <p class="hero__cargo">
+              <span class="texto-digitado">Estudante de Engenharia de Software</span>
+            </p>
+            <p>
+              Atualmente estagiário em manutenção e desenvolvimento de
+              sistemas e automações em Python na Cooperativa Integrada,
+              aplicando na prática o que aprendo na faculdade.
+            </p>
+            <br />
+            <a class="botao" href="projetos.html">Ver meus projetos</a>
+          </div>
         </div>
+      </section>
 
-        <div class="hidden">
-          <a href="https://instagram.com/g_kenjinagao" target="_blank">
-            <img
-              class="contact"
-              src="https://cdn-icons-png.flaticon.com/512/174/174855.png"
-              alt="Instagram"
-            />
-          </a>
-        </div>
+      <section class="secao secao--compacta">
+        <article class="revelar revelar--baixo">
+          <h2 class="secao__titulo">Sobre mim</h2>
+          <p class="secao__subtitulo">
+            Sou estudante de Engenharia de Software e estagiário em
+            manutenção e desenvolvimento de sistemas e automações em Python
+            na Cooperativa Integrada. No dia a dia, lido com a manutenção de
+            sistemas já em produção e crio automações que tornam processos
+            mais rápidos e confiáveis, sempre buscando escrever um código
+            limpo e organizado.
+          </p>
+          <div class="skills">
+            <span class="skills__item">HTML5</span>
+            <span class="skills__item">CSS3</span>
+            <span class="skills__item">JavaScript</span>
+            <span class="skills__item">Git &amp; GitHub</span>
+            <span class="skills__item">Lógica de Programação</span>
+            <span class="skills__item">Automações em Python</span>
+          </div>
+        </article>
+      </section>
+    </main>
 
-        <div class="hidden">
-          <a
-            href="https://linkedin.com/in/gabriel-kenji-carvalho-nagao-9b9a73346"
-            target="_blank"
-          >
-            <img
-              class="contact"
-              src="https://cdn-icons-png.flaticon.com/512/174/174857.png"
-              alt="LinkedIn"
-            />
-          </a>
-        </div>
-      </div>
-    </section>
+    <footer class="rodape">
+      <p>&copy; 2026 - Gabriel Kenji Carvalho Nagao.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
   </body>
-  <script src="scripts.js"></script>
 </html>

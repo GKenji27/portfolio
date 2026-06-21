@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Gabriel Kenji | Projetos</title>
+  </head>
+  <body>
+    <header class="cabecalho">
+      <div class="cabecalho__logo">Gabriel<span>Kenji</span></div>
+      <nav>
+        <ul class="menu-principal">
+          <li><a class="menu-principal__link" href="index.html">Início</a></li>
+          <li><a class="menu-principal__link" href="projetos.html">Projetos</a></li>
+          <li><a class="menu-principal__link" href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="faixa-carrossel">
+      <div class="carrossel-container">
+        <div class="carrossel">
+          <div class="carrossel__item" style="--delay: 0s">
+            <img src="assets/item1-1.png" alt="Captura de tela do projeto 1" />
+          </div>
+          <div class="carrossel__item" style="--delay: 3.6s">
+            <img src="assets/item1-2.png" alt="Captura de tela do projeto 2" />
+          </div>
+          <div class="carrossel__item" style="--delay: 7.2s">
+            <img src="assets/item1-3.png" alt="Captura de tela do projeto 3" />
+          </div>
+          <div class="carrossel__item" style="--delay: 10.8s">
+            <img src="assets/item1-4.png" alt="Captura de tela do projeto 4" />
+          </div>
+          <div class="carrossel__item" style="--delay: 14.4s">
+            <img src="assets/item1-5.png" alt="Captura de tela do projeto 5" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <main>
+      <section class="secao">
+        <h2 class="secao__titulo revelar">Meu Portfólio</h2>
+
+        <div class="projetos-grid">
+          <article class="projeto-card revelar revelar--baixo">
+            <div class="projeto-card__corpo">
+              <h3 class="projeto-card__titulo">Dashboard de Pedidos - Lift</h3>
+              <p class="projeto-card__descricao">
+                Aplicação web para visualização de pedidos e detalhes de
+                clientes, desenvolvida como desafio técnico. Consolida
+                pedidos, clientes e produtos em uma única visão, com busca
+                em tempo constante por meio de mapas de dados para evitar
+                requisições excessivas à API.
+              </p>
+              <div class="projeto-card__tags">
+                <span class="projeto-card__tag">React</span>
+                <span class="projeto-card__tag">Vite</span>
+                <span class="projeto-card__tag">Axios</span>
+                <span class="projeto-card__tag">React Router</span>
+              </div>
+              <a class="projeto-card__link" href="https://github.com/GKenji27/pedidos-lift" target="_blank">
+                Ver no GitHub →
+              </a>
+            </div>
+          </article>
+
+          <article class="projeto-card revelar revelar--baixo">
+            <div class="projeto-card__corpo">
+              <h3 class="projeto-card__titulo">Sistema de Helpdesk</h3>
+              <p class="projeto-card__descricao">
+                Aplicação para controle de chamados internos, desenvolvida
+                para uma empresa em que trabalhei. Usa o Supabase como
+                backend para armazenar e gerenciar os tickets de suporte
+                de forma organizada.
+              </p>
+              <div class="projeto-card__tags">
+                <span class="projeto-card__tag">React</span>
+                <span class="projeto-card__tag">Supabase</span>
+                <span class="projeto-card__tag">JavaScript</span>
+              </div>
+              <span class="projeto-card__link projeto-card__link--privado">
+                Repositório privado
+              </span>
+            </div>
+          </article>
+
+          <article class="projeto-card revelar revelar--baixo">
+            <div class="projeto-card__corpo">
+              <h3 class="projeto-card__titulo">Controle de Inventário</h3>
+              <p class="projeto-card__descricao">
+                Atualização de um sistema legado de controle de inventário,
+                permitindo listar equipamentos com sua localização, status
+                e valor. Modernizou um processo antes manual, facilitando o
+                acompanhamento dos ativos da empresa.
+              </p>
+              <div class="projeto-card__tags">
+                <span class="projeto-card__tag">React</span>
+                <span class="projeto-card__tag">JavaScript</span>
+              </div>
+              <span class="projeto-card__link projeto-card__link--privado">
+                Repositório privado
+              </span>
+            </div>
+          </article>
+
+          <article class="projeto-card revelar revelar--baixo">
+            <div class="projeto-card__corpo">
+              <h3 class="projeto-card__titulo">Estátua 3D</h3>
+              <p class="projeto-card__descricao">
+                Projeto experimental para testar animação 3D na web: uma
+                estátua que gira de acordo com o scroll da página,
+                sincronizando a rotação do modelo com a posição de rolagem.
+              </p>
+              <div class="projeto-card__tags">
+                <span class="projeto-card__tag">React</span>
+                <span class="projeto-card__tag">Three.js</span>
+                <span class="projeto-card__tag">Vite</span>
+              </div>
+              <a class="projeto-card__link" href="https://github.com/GKenji27/estatua3d" target="_blank">
+                Ver no GitHub ->
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="rodape">
+      <p>&copy; 2026 - Gabriel Kenji Carvalho Nagao.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>

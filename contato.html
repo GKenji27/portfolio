@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Gabriel Kenji | Contato</title>
+  </head>
+  <body>
+    <header class="cabecalho">
+      <div class="cabecalho__logo">Gabriel<span>Kenji</span></div>
+      <nav>
+        <ul class="menu-principal">
+          <li><a class="menu-principal__link" href="index.html">Início</a></li>
+          <li><a class="menu-principal__link" href="projetos.html">Projetos</a></li>
+          <li><a class="menu-principal__link" href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="secao">
+        <h1 class="secao__titulo revelar">Entre em Contato</h1>
+        <p class="secao__subtitulo revelar">
+          Estou aberto a oportunidades, parcerias e boas conversas sobre
+          tecnologia. Me encontre em uma das redes abaixo ou envie uma
+          mensagem direta pelo formulário.
+        </p>
+
+        <div class="contato-conteudo">
+          <div class="contato-redes revelar revelar--direita">
+            <a class="contato-redes__item" href="https://github.com/GKenji27" target="_blank">
+              <img
+                class="contato-redes__icone"
+                src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
+                alt="Ícone do GitHub"
+              />
+              <span>github.com/GKenji27</span>
+            </a>
+
+            <a class="contato-redes__item" href="https://instagram.com/g_kenjinagao" target="_blank">
+              <img
+                class="contato-redes__icone"
+                src="https://cdn-icons-png.flaticon.com/512/174/174855.png"
+                alt="Ícone do Instagram"
+              />
+              <span>@g_kenjinagao</span>
+            </a>
+
+            <a
+              class="contato-redes__item"
+              href="https://linkedin.com/in/gabriel-kenji-carvalho-nagao-9b9a73346"
+              target="_blank"
+            >
+              <img
+                class="contato-redes__icone"
+                src="https://cdn-icons-png.flaticon.com/512/174/174857.png"
+                alt="Ícone do LinkedIn"
+              />
+              <span>Gabriel Kenji Carvalho Nagao</span>
+            </a>
+
+            <a class="contato-redes__item" href="mailto:gkenjinagao@gmail.com">
+              <img
+                class="contato-redes__icone"
+                src="https://cdn-icons-png.flaticon.com/512/281/281769.png"
+                alt="Ícone do Gmail"
+              />
+              <span>gkenjinagao@gmail.com</span>
+            </a>
+          </div>
+
+          <form class="formulario-contato revelar revelar--baixo" novalidate>
+            <div class="formulario-contato__campo">
+              <label for="nome">Nome</label>
+              <input type="text" id="nome" name="nome" placeholder="Seu nome" />
+            </div>
+
+            <div class="formulario-contato__campo">
+              <label for="email">E-mail</label>
+              <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" />
+            </div>
+
+            <div class="formulario-contato__campo">
+              <label for="mensagem">Mensagem</label>
+              <textarea
+                id="mensagem"
+                name="mensagem"
+                rows="5"
+                placeholder="Escreva sua mensagem aqui..."
+              ></textarea>
+            </div>
+
+            <p class="formulario-contato__mensagem" role="status"></p>
+
+            <button type="submit" class="botao">Enviar mensagem</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="rodape">
+      <p>&copy; 2026 - Gabriel Kenji Carvalho Nagao.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>

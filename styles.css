@@ -21,6 +21,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -28,6 +29,7 @@ body {
   color: var(--cor-texto);
   font-family: var(--fonte-base);
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 img {
@@ -267,6 +269,7 @@ ul {
   width: 100%;
   background-color: rgba(162, 149, 209, 0.43);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
 }
 
 /* O container esconde o conteúdo que sai da área visível do carrossel */
@@ -275,34 +278,31 @@ ul {
   overflow: hidden;
 }
 
-/* A área do carrossel é um flexbox que posiciona os itens, mas cada item é absoluto */
+/* A faixa é uma fileira flex que se move inteira via translateX.
+   IMPORTANTE: o HTML precisa ter os itens duplicados (os mesmos 5 itens,
+   repetidos uma segunda vez em seguida) para o loop ficar contínuo,
+   já que a animação anda exatamente 50% da largura total da faixa. */
 .carrossel {
-  width: 100%;
   display: flex;
+  width: max-content;
   gap: 60px;
-  position: relative;
-  height: 100px;
+  padding: 20px 0;
+  animation: girarCarrossel 30s linear infinite;
 }
 
-/* Cada item do carrossel começa fora da tela à direita e se move para a esquerda */
 .carrossel__item {
   width: 190px;
-  position: absolute;
-  left: 100%;
-  top: 50%;
-  transform: translateY(-50%);
+  flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: girarCarrossel 18s linear infinite;
-  animation-delay: var(--delay); /* atraso permite que os itens entrem em momentos diferentes */
   cursor: pointer;
   transition: transform 0.3s ease;
 }
 
 /* Ao passar o mouse, o item aumenta de tamanho para destaque visual */
 .carrossel__item:hover {
-  transform: translateY(-50%) scale(1.1);
+  transform: scale(1.1);
 }
 
 .carrossel__item img {
@@ -311,10 +311,11 @@ ul {
   border-radius: 8px;
 }
 
-/* A animação move o item de 100% (direita) até -25% (saindo à esquerda) */
+/* A animação move a faixa inteira para a esquerda em 50% da sua largura
+   total — como os itens estão duplicados, isso forma um loop perfeito */
 @keyframes girarCarrossel {
-  from { left: 100%; }
-  to { left: -25%; }
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
 }
 
 /* GRID DE PROJETOS */
@@ -536,5 +537,41 @@ ul {
   .contato-conteudo {
     flex-direction: column;
     align-items: center;
+  }
+
+  .secao {
+    padding: 60px 24px;
+  }
+
+  .projetos-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .projeto-card__corpo {
+    padding: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .secao {
+    padding: 50px 16px;
+  }
+
+  .secao__titulo {
+    font-size: 1.8rem;
+  }
+
+  .projeto-card__titulo {
+    font-size: 1.25rem;
+  }
+
+  .carrossel__item {
+    width: 130px;
+  }
+
+  .carrossel {
+    gap: 35px;
+    animation-duration: 20s;
   }
 }

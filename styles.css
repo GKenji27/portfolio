@@ -262,18 +262,20 @@ ul {
 /* ===========================================================
    PÁGINA PROJETOS — CARROSSEL
    =========================================================== */
+/* A faixa do carrossel cria um bloco de destaque para as imagens */
 .faixa-carrossel {
   width: 100%;
   background-color: rgba(162, 149, 209, 0.43);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
 }
 
+/* O container esconde o conteúdo que sai da área visível do carrossel */
 .carrossel-container {
   width: 100%;
   overflow: hidden;
-  
 }
 
+/* A área do carrossel é um flexbox que posiciona os itens, mas cada item é absoluto */
 .carrossel {
   width: 100%;
   display: flex;
@@ -282,6 +284,7 @@ ul {
   height: 100px;
 }
 
+/* Cada item do carrossel começa fora da tela à direita e se move para a esquerda */
 .carrossel__item {
   width: 190px;
   position: absolute;
@@ -292,11 +295,12 @@ ul {
   align-items: center;
   justify-content: center;
   animation: girarCarrossel 18s linear infinite;
-  animation-delay: var(--delay);
+  animation-delay: var(--delay); /* atraso permite que os itens entrem em momentos diferentes */
   cursor: pointer;
   transition: transform 0.3s ease;
 }
 
+/* Ao passar o mouse, o item aumenta de tamanho para destaque visual */
 .carrossel__item:hover {
   transform: translateY(-50%) scale(1.1);
 }
@@ -307,6 +311,7 @@ ul {
   border-radius: 8px;
 }
 
+/* A animação move o item de 100% (direita) até -25% (saindo à esquerda) */
 @keyframes girarCarrossel {
   from { left: 100%; }
   to { left: -25%; }
@@ -350,6 +355,9 @@ ul {
   font-size: 1rem;
   color: var(--cor-texto-secundario);
   margin-bottom: 15px;
+  text-align: justify;
+  hyphens: auto;
+  -webkit-hyphens: auto;
 }
 
 .projeto-card__tags {

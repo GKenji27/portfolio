@@ -1,3 +1,4 @@
+// Mostra elementos com a classe .revelar quando eles entram na área visível da página
 function iniciarRevelacaoAoRolar() {
   const elementosRevelar = document.querySelectorAll(".revelar");
 
@@ -17,6 +18,7 @@ function iniciarRevelacaoAoRolar() {
   elementosRevelar.forEach((elemento) => observadorDeRevelar.observe(elemento));
 }
 
+// Marca o link do menu correspondente à página atual como ativo
 function marcarLinkDeNavegacaoAtivo() {
   const linksDoMenu = document.querySelectorAll(".menu-principal__link");
   const paginaAtual = window.location.pathname.split("/").pop() || "index.html";
@@ -31,6 +33,7 @@ function marcarLinkDeNavegacaoAtivo() {
   });
 }
 
+// Configura a validação do formulário de contato na página contato.html
 function configurarFormularioDeContato() {
   const formulario = document.querySelector(".formulario-contato");
   if (!formulario) return;
@@ -47,15 +50,24 @@ function configurarFormularioDeContato() {
     const emailValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(campoEmail.value.trim());
     const mensagemValida = campoMensagem.value.trim().length >= 10;
 
-    if (!nomeValido || !emailValido || !mensagemValida) {
+    if (!nomeValido || !mensagemValida) {
+      // Se qualquer campo não estiver válido, exibe uma mensagem de erro
       exibirMensagemDoFormulario(
         caixaDeMensagem,
         "Por favor, preencha todos os campos corretamente (mensagem com no mínimo 10 caracteres).",
         "erro"
       );
       return;
+    } else if (!emailValido) {
+      exibirMensagemDoFormulario(
+        caixaDeMensagem,
+        "Por favor, preencha o e-mail corretamente. (seuemail@exemplo.com) ",
+        "erro"
+      );
+      return;
     }
 
+    // Se os dados estiverem válidos, exibe mensagem de sucesso e limpa o formulário
     exibirMensagemDoFormulario(
       caixaDeMensagem,
       `Obrigado, ${campoNome.value.trim()}! Sua mensagem foi enviada com sucesso.`,
@@ -66,6 +78,7 @@ function configurarFormularioDeContato() {
   });
 }
 
+// Atualiza o texto e a classe de estado da mensagem exibida no formulário
 function exibirMensagemDoFormulario(elemento, texto, tipo) {
   elemento.textContent = texto;
   elemento.classList.remove(
